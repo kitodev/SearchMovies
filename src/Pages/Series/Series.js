@@ -31,6 +31,9 @@ const Series = () => {
   return (
     <div>
       <span className="pageTitle">Discover Series</span>
+      {numOfPages > 1 && (
+        <CustomPagination setPage={setPage} numOfPages={numOfPages} />
+      )}
       <Genres
         type="tv"
         selectedGenres={selectedGenres}

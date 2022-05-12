@@ -31,6 +31,9 @@ const Movies = () => {
   return (
     <div>
       <span className="pageTitle">Discover Movies</span>
+      {numOfPages > 1 && (
+        <CustomPagination setPage={setPage} numOfPages={numOfPages} />
+      )}
       <Genres
         type="movie"
         selectedGenres={selectedGenres}
